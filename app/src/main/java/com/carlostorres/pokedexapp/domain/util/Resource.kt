@@ -1,0 +1,22 @@
+package com.carlostorres.pokedexapp.domain.util
+
+/**
+ * A generic class that holds a value with its loading status.
+ * @param <T>
+ */
+sealed class Resource<T>(val data: T? = null, val message: String? = null) {
+    /**
+     * Represents a successful state with data.
+     */
+    class Success<T>(data: T) : Resource<T>(data)
+
+    /**
+     * Represents a loading state, optionally with initial/cached data.
+     */
+    class Loading<T>(data: T? = null) : Resource<T>(data)
+
+    /**
+     * Represents an error state with a message, optionally with cached data.
+     */
+    class Error<T>(message: String, data: T? = null) : Resource<T>(data, message)
+}
