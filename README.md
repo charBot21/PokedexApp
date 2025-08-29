@@ -78,3 +78,9 @@ Follow these steps:
 4.  Run the app on an emulator or a physical device with Android 7.0 (API 24) or higher.
 
 ## Potential Future Improvements
+
+- **Data Pre-fetching with WorkManager:** Implement a background task to proactively download the first page of data, making the initial app load feel instantaneous.
+- **Search Functionality:** Add a search bar to the main screen to filter Pokémon by name or number.
+- **Testing:** Add Unit Tests for ViewModels and UseCases, and UI Tests with Compose Test.
+- **Transition Animations:** Enhance navigation with screen transition animations between the list and detail screens.
+
